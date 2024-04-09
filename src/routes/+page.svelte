@@ -32,21 +32,21 @@
     
     <section class="py-4 pb-8 border-b border-slate-400">
         <h2 class="text-3xl pb-1 my-3 text-center">Our Popular</h2>
-        <div class="flex justify-around lg:justify-between ">
-            <div>
+        <div class="flex  flex-row flex-wrap lg:flex-nowrap justify-around lg:justify-between overflow-hidden">
+            <div class="basis-2 py-3">
                 <PopularCard src="https://static.toiimg.com/photo/53251884.cms"/> 
             </div>
-            <div>
+            <div class="basis-2 py-3">
                 <PopularCard src="https://www.readyseteat.com/sites/g/files/qyyrlu501/files/images/article/hero/BARISTA-STYLE-COFFEE-HERO.jpg"/>
             </div>
-            <div>
+            <div class="basis-2 py-3">
                 <PopularCard src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLr2H9KXFOygP_n5GS99Eq6ArjZQoSoCRfBV1AKoVwQlH4gFIyRK4iNyp87uF4zkejoWpUjRtu_RyKSyAxjiwZCoDYUA_9xTRgYvJtZm3XvQ28XgQyOup_Ncfh3P2KOLo607Y7Qfr1h6FE/s1600/Chilli+Chiken.jpg"/>
             </div>
         </div>
     </section>
     
     <section class="py-2">
-        <h2 class="text-3xl pb-1 mt-3  text-center">Recents</h2>
+        <h2 class="text-3xl pb-1 mt-3 text-center">Recents</h2>
         <div>
             <RecentCard src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=600"/>
         </div>
