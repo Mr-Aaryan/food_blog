@@ -1,0 +1,52 @@
+<main class="max-w-5xl mx-auto px-6">
+    <div class="relative">
+        <div class="h-auto">
+            <img src="https://t4.ftcdn.net/jpg/02/84/46/89/360_F_284468940_1bg6BwgOfjCnE3W0wkMVMVqddJgtMynE.jpg" alt="burger img" class="h-64 w-full object-fit-cover"> 
+        </div>
+        <div class="absolute top-20 left-10 right-0 text-yellow-500 font-bold w-fit px-7 py-2 text-2xl">
+            Deliciously Easy! <br />
+            Crafting Memorable Meals
+        </div>
+    </div>
+    <div class="py-5">
+        <h2 class="text-yellow-500 font-bold text-3xl">Welcome to [COMPANY NAME]!</h2>
+        <div class="py-2">
+            <div class="py-3">
+                <h3 class="font-semibold">Introduction</h3>
+                <p class="text-lg lg:text-xl text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima velit, dignissimos quasi officia odit officiis porro. Quod maiores, beatae dolorum illo laboriosam voluptatum enim debitis tempore ipsam illum explicabo!It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div class="py-3">
+                <h3 class="font-semibold">Our Story</h3>
+                <p class="text-lg lg:text-xl text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima velit, dignissimos quasi officia odit officiis porro. Quod maiores, beatae dolorum illo laboriosam voluptatum enim debitis tempore ipsam illum explicabo!It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div class="py-3">
+                <h3 class="font-semibold">Mission and Values</h3>
+                <p class="text-lg lg:text-xl text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima velit, dignissimos quasi officia odit officiis porro. Quod maiores, beatae dolorum illo laboriosam voluptatum enim debitis tempore ipsam illum explicabo!It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div class="py-3">
+                <h3 class="font-semibold">Food Philosophy</h3>
+                <p class="text-lg lg:text-xl text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima velit, dignissimos quasi officia odit officiis porro. Quod maiores, beatae dolorum illo laboriosam voluptatum enim debitis tempore ipsam illum explicabo!It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div class="py-3">
+                <h3 class="font-semibold">Experience and Expertise</h3>
+                <p class="text-lg lg:text-xl text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima velit, dignissimos quasi officia odit officiis porro. Quod maiores, beatae dolorum illo laboriosam voluptatum enim debitis tempore ipsam illum explicabo!It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div class="py-3">
+                <h3 class="font-semibold">Photography and Styling</h3>
+                <p class="text-lg lg:text-xl text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima velit, dignissimos quasi officia odit officiis porro. Quod maiores, beatae dolorum illo laboriosam voluptatum enim debitis tempore ipsam illum explicabo!It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div class="py-3">
+                <h3 class="font-semibold">Community Engagement</h3>
+                <p class="text-lg lg:text-xl text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima velit, dignissimos quasi officia odit officiis porro. Quod maiores, beatae dolorum illo laboriosam voluptatum enim debitis tempore ipsam illum explicabo!It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div class="py-3">
+                <h3 class="font-semibold">Contact us</h3>
+                <p class="text-lg lg:text-xl text-gray-600">Got a question or just want to say hello? Feel free to reach out to us at <span class="text-blue-700">[contact@email.com]</span>. We'd love to hear from you!</p>
+            </div>
+            <div class="py-3">
+                <h3 class="font-semibold">Connect with Us</h3>
+                <p class="text-lg lg:text-xl text-gray-600">Stay updated with our latest recipes and food adventures by following us on <span class="text-blue-700">Instagram</span> and <span class="text-blue-700">Facebook</span>. Join our community and let's cook together!</p>
+            </div>
+        </div>
+    </div>
+</main>
