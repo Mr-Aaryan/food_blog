@@ -12,7 +12,7 @@
                 </div>
                 <div class="basis-3/4 px-5 py-3 text-white">
                     <h2 class="text-yellow-500 py-2 font-bold">Guide To Make Chicken Tikki</h2>
-                    <span class="mt-3">April 3, 2024</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eveniet corporis vel excepturi, iste cumque voluptatibus, quos aliquam officia totam temporibus unde eos dicta reiciendis... <a href="/se">Read More</a></p>
                 </div>
             </div>
         </a>
