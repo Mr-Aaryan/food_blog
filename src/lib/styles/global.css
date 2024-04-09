@@ -1,9 +1,13 @@
+@import '@fontsource/manrope';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+html {
+	--font-sans: 'Manrope', sans-serif;
+}
 
 html,
 body {
@@ -51,7 +55,7 @@ p a {
 		@apply text-2xl font-medium;
 	}
 	a {
-		@apply hover:text-cyan-500;
+		@apply hover:text-yellow-500;
 	}
 }
 svg {

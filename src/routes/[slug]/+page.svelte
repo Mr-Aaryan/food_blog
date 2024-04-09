@@ -15,7 +15,7 @@
 </svelte:head>
 
 <main>
-    <div class="max-w-3xl w-full mx-auto py-10">
+    <div class="max-w-3xl w-full mx-auto py-10 border-b">
         <article class="px-5">
             <div class="">
                 <Breadcrumb />
@@ -48,6 +48,33 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
             </iframe>
+        </div>
+    </div>
+    <div class="max-w-5xl mx-auto px-5 py-8">
+        <h2 class="text-center">You May Also Like</h2>
+        <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
+            <a href="/rec" class="">
+                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=600" alt="m">
+                <div class="py-2 hover:none">
+                    <span class="uppercase text-sm font-semibold text-gray-700">veg</span>
+                    <h2 class="text-xl text-yellow-500 hover:underline">Tarkari Paneer</h2>
+                </div>
+            </a>
+            <a href="/rec" class="">
+                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://images.pexels.com/photos/803963/pexels-photo-803963.jpeg?auto=compress&cs=tinysrgb&w=600" alt="m">
+                <div class="py-2 hover:none">
+                    <span class="uppercase text-sm font-semibold text-gray-700">non-veg</span>
+                    <h2 class="text-xl text-yellow-500 hover:underline">Nasta Me Pasta</h2>
+                </div>
+            </a>
+            
+            <a href="/rec" class="">
+                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://images.pexels.com/photos/803963/pexels-photo-803963.jpeg?auto=compress&cs=tinysrgb&w=600" alt="m">
+                <div class="py-2 hover:none">
+                    <span class="uppercase text-sm font-semibold text-gray-700">non-veg</span>
+                    <h2 class="text-xl text-yellow-500 hover:underline">Nasta Me Pasta</h2>
+                </div>
+            </a>
         </div>
     </div>
 </main>

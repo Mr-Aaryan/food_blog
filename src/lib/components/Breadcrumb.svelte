@@ -26,7 +26,7 @@
         <Arrow />
     </span>
 
-    <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+    <span class="text-yellow-500">
         Chicken Tikki
-    </a>
+    <span>
 </div>
