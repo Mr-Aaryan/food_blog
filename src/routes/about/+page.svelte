@@ -3,7 +3,7 @@
         <div class="h-auto">
             <img src="https://t4.ftcdn.net/jpg/02/84/46/89/360_F_284468940_1bg6BwgOfjCnE3W0wkMVMVqddJgtMynE.jpg" alt="burger img" class="h-64 w-full object-cover object-center"> 
         </div>
-        <div class="absolute top-20 left-10 right-0 text-yellow-400 font-bold w-fit px-7 py-2 text-2xl">
+        <div class="hidden lg:absolute top-20 left-10 right-0 text-yellow-400 bg-slate-500 font-bold w-fit px-7 py-2 text-2xl">
             Deliciously Easy! <br />
             Crafting Memorable Meals
         </div>
