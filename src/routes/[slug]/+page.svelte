@@ -15,7 +15,7 @@
 </svelte:head>
 
 <main>
-    <div class="max-w-3xl w-full mx-auto pt-10">
+    <div class="max-w-3xl w-full mx-auto py-10">
         <article class="px-5">
             <div class="">
                 <Breadcrumb />
@@ -40,5 +40,14 @@
                 </ul>
             </div>
         </article>
+        <div class="w-full px-5 mt-8 rounded bg-neutral-100">
+            <iframe width="315" height="560" class="mx-auto"
+                src="https://www.youtube.com/embed/SjFOGBNyEqc?si=d6YD9p5QvYbDHy__"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 </main>
