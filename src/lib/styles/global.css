@@ -1,3 +1,99 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+html,
+body {
+	height: 100%;
+	font-size: 1.05rem;
+	font-family: var(--font-sans);
+	color: #343a40;
+	background-color: #f8f9fa;
+}
+
+html {
+	color: var(--text-1);
+	accent-color: var(--link);
+	background-image: var(--background);
+	background-attachment: fixed;
+}
+
+img {
+	border-radius: var(--radius-3);
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	padding-inline-start: 0;
+}
+p {
+	word-spacing: .25rem;
+}
+p a {
+	text-decoration: underline;
+}
+@layer base {
+	h1 {
+	  	@apply text-2xl;
+	}
+	h2 {
+	  	@apply text-3xl font-medium;
+	}
+	h3 {
+		@apply text-2xl font-medium;
+	}
+	a {
+		@apply hover:text-cyan-500;
+	}
+}
+svg {
+	display: inline;
+}
+.prose :is(h2, h3, h4, h5, h6) {
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+}
+
+.prose p:not(:is(h2, h3, h4, h5, h6) + p) {
+	margin-top: 2rem;
+}
+
+.prose :is(ul, ol) {
+	list-style-type: '🔥';
+	padding-left: 1.5rem;
+}
+
+.prose :is(ul, ol) li {
+	margin-block: .5rem;
+	padding-inline-start: .5rem;
+}
+
+.prose iframe {
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+.prose pre {
+	max-inline-size: 100%;
+	padding: 1rem;
+	border-radius: 8px;
+	tab-size: 2;
+}
+
+:where(:not(pre) > code) {
+	background: #e5e5e5;
+	border-radius: 5px;
+	padding: .25rem .5rem;
+	writing-mode: 1r;
+ }
+
+ :where(:not(pre) > code, kbd) {
+	white-space: nowrap;
+ }
