@@ -5,6 +5,7 @@
 </script>
 
 <main class="max-w-5xl px-5 mx-auto my-10 light">
+
     <Categories />
 
     <Recents />
