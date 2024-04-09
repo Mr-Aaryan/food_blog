@@ -4,6 +4,11 @@
     function toggleMenu() {
       isOpen = !isOpen;
     }
+
+    let activeOption = 'home';
+    function handleClick(option){
+        activeOption = option;
+    }
 </script>
   
 <header class="bg-white border-b">
@@ -33,12 +38,11 @@
               <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
             <div class="{isOpen ? 'translate-x-0 opacity-100' : 'opacity-0 -translate-x-full'} absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:shadow-none lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
             <ul class="flex flex-col space-y-8 lg:flex-row lg:items-center lg:space-y-0 lg:-px-8">
-                <li><a class="block font-medium lg:mx-3 hover:underline hover:text-yellow-500" href="/">Home</a></li>
-                <li><a class="block font-medium lg:mx-3 hover:underline hover:text-yellow-500" href="/about">About</a></li>
-                <li><a class="block font-medium lg:mx-3 hover:underline hover:text-yellow-500" href="/recipes">Recipes</a></li>
+                <li><a class:underline={activeOption === 'home'} on:click={()=> handleClick('home')}  class="block font-medium lg:mx-3  hover:text-yellow-500" href="/">Home</a></li>
+                <li><a class:underline={activeOption === 'about'} on:click={()=> handleClick('about')} class="block font-medium lg:mx-3  hover:text-yellow-500" href="/about">About</a></li>
+                <li><a class:underline={activeOption === 'recipe'} on:click={()=> handleClick('recipe')} class="block font-medium lg:mx-3  hover:text-yellow-500" href="/recipes">Recipes</a></li>
             </ul>
           </div>
       </div>
   </nav>
 </header>
-  
