@@ -11,7 +11,7 @@
     }
 </script>
   
-<header class="bg-white border-b">
+<header class="bg-white border-b sticky top-0 z-10">
     <nav class="">
         <div class="max-w-5xl px-6 py-6 mx-auto lg:flex lg:justify-between lg:items-center">
             <div class="flex items-center justify-between">
