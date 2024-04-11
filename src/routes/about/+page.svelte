@@ -1,3 +1,8 @@
+<script>
+    import Rating from "$lib/components/Rating.svelte";
+    let ratingCount = 3;
+</script>
+
 <main class="max-w-5xl mx-auto px-5 py-10">
     <div class="relative">
         <div class="h-auto">
@@ -31,4 +36,8 @@
                 <p>Stay updated with our latest recipes and food adventures by following us on <span class="text-blue-700">Instagram</span> and <span class="text-blue-700">Facebook</span>. Join our community and let's cook together!</p>
         </div>
     </div>
+
 </main>
+<div class="max-w-5xl mx-auto px-5 py-10">
+    <Rating />
+</div>
