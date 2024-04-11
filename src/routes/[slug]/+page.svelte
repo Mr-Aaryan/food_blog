@@ -1,6 +1,7 @@
 <script>
     import * as config from '$lib/site/config.js'
     import Breadcrumb from '$lib/components/Breadcrumb.svelte'
+    import Rating from '$lib/components/Rating.svelte';
     export let data;
 
     let videoId = '';
@@ -18,7 +19,7 @@
 
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
     
-    if (data.post.youtube_url != null) {
+    if (data.post.youtube_url != '') {
         let url = data.post.youtube_url
         if (url.includes('/shorts/')){
             videoId = url.split("/shorts/")[1];
@@ -55,7 +56,7 @@
                 {@html data.post.content}
             </div>
         </article>
-        {#if data.post.youtube_url}
+        {#if videoId != ''}
         <div class="w-full px-5 mt-8 rounded bg-neutral-100">
             <iframe width="315" height="560" class="mx-auto"
                 src="https://www.youtube.com/embed/{videoId}"
@@ -81,6 +82,10 @@
             </a>
             {/each}
         </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-5 py-8 bg-neutral-100">
+        <Rating />
     </div>
     
 </main>

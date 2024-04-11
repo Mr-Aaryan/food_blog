@@ -1,13 +1,16 @@
 import { pb } from '$lib/pocketbase';
 
 export async function load(){
-    // fetch a paginated records list
-const recipes = await pb.collection('posts').getList();
 
-console.log(recipes);
+    const posts = await pb.collection('posts').getList(1, 50, {
+        filter: 'Published = True',
+        expand: "category"
+    });
 
-return {
-    recipes : recipes.items,
-}
+    console.log(posts);
+
+    return {
+        posts : posts.items,
+    }
 
 }
