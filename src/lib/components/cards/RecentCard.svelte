@@ -3,11 +3,13 @@
     export let title = '';
     export let desc = '';
     export let post_id = '';
+
+    let slug = title.toLowerCase().replace(/\s+/g, "-");
 </script>
 
 <section>
     <div class="grid grid-cols-1 gap-8 mt-8 md:mt-3">
-        <a href="/{post_id}">
+        <a href="/{slug}-{post_id}">
             <div class="flex flex-col md:flex-row bg-neutral-800 my-3 rounded overflow-hidden">
                 <div class="w-full md:w-96">
                     <img class="md:basis-1/4 object-cover w-full h-[230px]" src={src} alt="burger img" > 

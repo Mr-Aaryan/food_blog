@@ -1,8 +1,10 @@
 <script>
 	import Arrow from "$lib/icons/arrow.svelte";
+    export let title;
+    export let categories;
 </script>
 <div class="flex items-center py-4 overflow-x-auto whitespace-nowrap">
-    <a href="#" class="text-gray-500">
+    <a href="/recipes" class="text-gray-500">
         Recipes
     </a>
 
@@ -10,23 +12,17 @@
         <Arrow />
     </span>
 
-    <a href="#" class="text-gray-500 hover:underline">
-        Category
-    </a>
+    {#each categories as cat}
+        <a href="/recipes/{cat.id}" class="text-gray-500 hover:underline">
+            {cat.category}
+        </a>
 
-    <span class="mx-2 text-gray-500 rtl:-scale-x-100">
-        <Arrow />
-    </span>
-
-    <a href="#" class="text-gray-500 hover:underline">
-        Sub-Category
-    </a>
-
-    <span class="mx-2 text-gray-500 rtl:-scale-x-100">
-        <Arrow />
-    </span>
+        <span class="mx-2 text-gray-500 rtl:-scale-x-100">
+            <Arrow />
+        </span>
+    {/each}
 
     <span class="text-yellow-500">
-        Chicken Tikki
+        {title}
     <span>
 </div>
