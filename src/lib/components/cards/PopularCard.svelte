@@ -2,11 +2,11 @@
     import { Rating, AdvancedRating, ScoreRating } from 'flowbite-svelte';
     let ratingCount = 4.5;
 
-    export let src;
+    export let src, href;
 </script>
 
 <div class="w-full md:max-w-sm lg:w-[335px] h-auto mx-2 my-5 md:my-0 lg:mx-4 ease-in duration-100 hover:scale-105 hover:border hover:border-gray-200 hover:shadow rounded-t-lg">
-    <a href="/rec">
+    <a href={href}>
         <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src={src} alt="m" >
         <div class="py-2 hover:none">
             <div class="px-2">

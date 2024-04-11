@@ -11,9 +11,9 @@
     <section class="border-b border-gray-400 pb-12">
         <div class="flex justify-around lg:justify-between flex-row flex-wrap overflow-hidden w-full">
             {#each data.categories as cat}
-            <div class="basis-3 my-5">
-                <CategoryCard category_id={cat.id} itemName={cat.category} src="https://i.ndtvimg.com/i/2016-09/tofu-625_625x350_61474273627.jpg"/>
-            </div>
+                <div class="basis-3 my-5">
+                    <CategoryCard category_id={cat.id} itemName={cat.category} src="https://i.ndtvimg.com/i/2016-09/tofu-625_625x350_61474273627.jpg"/>
+                </div>
             {/each}
         </div>
     </section>
@@ -21,9 +21,9 @@
     <section class="py-4 pb-8 border-b border-slate-400">
         <h2 class="text-3xl pb-1 my-3 text-center">Our Popular</h2>
         <div class="grid grid-cols-1 gap-1 lg:gap-8 mt-8 md:gap-3 md:grid-cols-3 xl:grid-cols-3">
-            <PopularCard src="https://static.toiimg.com/photo/53251884.cms"/> 
-            <PopularCard src="https://www.readyseteat.com/sites/g/files/qyyrlu501/files/images/article/hero/BARISTA-STYLE-COFFEE-HERO.jpg"/>
-            <PopularCard src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLr2H9KXFOygP_n5GS99Eq6ArjZQoSoCRfBV1AKoVwQlH4gFIyRK4iNyp87uF4zkejoWpUjRtu_RyKSyAxjiwZCoDYUA_9xTRgYvJtZm3XvQ28XgQyOup_Ncfh3P2KOLo607Y7Qfr1h6FE/s1600/Chilli+Chiken.jpg"/>
+            {#each data.posts as post}
+                <PopularCard src="http://127.0.0.1:8090/api/files/{post.collectionId}/{post.id}/{post.featured_image}" href="/{post.title.toLowerCase().replace(/\s+/g, "-")}-{post.id}"/>
+            {/each} 
         </div>
     </section>
     

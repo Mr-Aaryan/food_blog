@@ -9,12 +9,9 @@
             fillColor[i] = i <= index ? 'gold' : 'gray';
         }
     }
-    function afterSubmit(){
-        reviewContent = '';
-    }
   </script>
   
-  <div>
+  <div class="pb-12 border-b border-black">
     <div class="w-fit">
         <h3>Your Rating</h3>
         <div class="mt-3">

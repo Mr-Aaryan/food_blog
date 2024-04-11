@@ -1,5 +1,6 @@
 <script>
-    import Rating from "$lib/components/Rating.svelte";
+    import { Rating, AdvancedRating, ScoreRating } from 'flowbite-svelte';
+    import RatingInput from "$lib/components/Rating.svelte";
     let ratingCount = 3;
 </script>
 
@@ -38,3 +39,17 @@
     </div>
 
 </main>
+<div class="max-w-3xl mx-auto px-5 py-8 bg-neutral-100">
+    <RatingInput />
+    <div class="mt-5 py-3 px-3 border-b">
+        <div class="flex items-center w-fit">
+            <img src="https://pinnacle.works/wp-content/uploads/2022/06/dummy-image.jpg" alt="dummy_img" class="h-10 rounded-full">
+            <span class="px-3"> Person Name</span>
+        </div>
+        <div class="py-1 flex">
+            <Rating id="example-3" total={5} size={24} rating={ratingCount} />
+            <span class="px-5 text-sm text-gray-500">2024/02/01</span>
+        </div>
+        <p class="py-3 px-2">Followed the exact recipe and it was far too sweet. I may try this recipe again with way less sugar, or even omit the sugar.</p>
+    </div>
+</div>
