@@ -14,7 +14,7 @@
     }
   </script>
   
-  <form class=" w-fit">
+  <div class=" w-fit">
     {#each stars as star, index}
         <button class="px-1" on:click={()=> toggleFill(index)} bind:this={index}>
             <svg
@@ -41,5 +41,5 @@
             <button type="submit" class="border border-black px-3 py-1 my-2 w-full hover:bg-black hover:text-white">Submit</button>
         </div>
     </div>
-  </form>
+  </div>
   

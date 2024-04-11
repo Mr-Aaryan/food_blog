@@ -1,3 +1,7 @@
+<script>
+    export let data;
+</script>
+
 <section class="bg-white">
     <div class="max-w-5xl px-5 py-10 mx-auto">
         <div class="text-center">
@@ -9,35 +13,16 @@
         </div>
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
-            <a href="/rec" class="">
-                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=600" alt="m">
-                <div class="py-2 hover:none">
-                    <span class="uppercase text-sm font-semibold text-gray-700">veg</span>
-                    <h2 class="text-xl text-yellow-500 hover:underline">Tarkari Paneer</h2>
-                </div>
-            </a>
-            <a href="/rec" class="">
-                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://images.pexels.com/photos/803963/pexels-photo-803963.jpeg?auto=compress&cs=tinysrgb&w=600" alt="m">
-                <div class="py-2 hover:none">
-                    <span class="uppercase text-sm font-semibold text-gray-700">non-veg</span>
-                    <h2 class="text-xl text-yellow-500 hover:underline">Nasta Me Pasta</h2>
-                </div>
-            </a>
-            
-            <a href="/rec" class="">
-                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://images.pexels.com/photos/803963/pexels-photo-803963.jpeg?auto=compress&cs=tinysrgb&w=600" alt="m">
-                <div class="py-2 hover:none">
-                    <span class="uppercase text-sm font-semibold text-gray-700">non-veg</span>
-                    <h2 class="text-xl text-yellow-500 hover:underline">Nasta Me Pasta</h2>
-                </div>
-            </a>
-            <a href="/rec" class="">
-                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 hover:scale-105" src="https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600" alt="m">
-                <div class="py-2 hover:none">
-                    <span class="uppercase text-sm font-semibold text-gray-700">non-veg</span>
-                    <h2 class="text-xl text-yellow-500 hover:underline">Chicken Burger</h2>
-                </div>
-            </a>
+            {#each data.recipes as recipe}
+                <a href="/{recipe.id}" class="">
+                    <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=600" alt="m">
+                    <div class="py-2 hover:none">
+                        <span class="uppercase text-sm font-semibold text-gray-700">{recipe.category}</span>
+                        <h2 class="text-xl text-yellow-500 hover:underline">{recipe.title}</h2>
+                    </div>
+                </a>
+            {/each}
+
         </div>
     </div>
 </section>
