@@ -3,7 +3,7 @@
 </script>
 
 <a href="/recipes/{category_id}">
-    <div class="relative w-fit shadow-xl hover:cursor-pointer">
+    <div class="relative w-fit shadow-md hover:cursor-pointer">
         <div class="h-auto max-w-sm overflow-hidden rounded">
             <img src={src} alt="burger img" class="h-[250px] max-w-xs hover:scale-125 ease-in duration-300"> 
         </div>
