@@ -26,6 +26,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/manrope": "^5.0.19"
+		"@fontsource/manrope": "^5.0.19",
+		"pocketbase": "^0.21.1"
 	}
 }
