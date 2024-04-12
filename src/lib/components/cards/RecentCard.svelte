@@ -16,7 +16,7 @@
                 </div>
                 <div class="basis-3/4 px-5 py-3 text-white">
                     <h2 class="text-yellow-500 py-2 font-bold hover:underline">{title}</h2>
-                    <div>{@html desc}...</div>
+                    <div>{desc}</div>
                 </div>
             </div>
         </a>

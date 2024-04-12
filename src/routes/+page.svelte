@@ -34,7 +34,7 @@
             <RecentCard
                 post_id = {post.id}
                 title={post.title}
-                desc={post.content}
+                desc={post.description}
                 src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=600"
             />
         </div>

@@ -15,6 +15,11 @@ export async function load({params}) {
         expand: "category"
     });
 
+    const reviews = await pb.collection('reviews').getList(1, 50, {
+        filter: `postId = "${post_id}" && Published = True`,
+        expand: "userId"
+    });
+    
     console.log(similar_posts)
 
 
@@ -38,6 +43,7 @@ export async function load({params}) {
 
     return {
         post,
+        reviews: reviews.items,
         categories : categoriesArray,
         similar_posts: similar_posts.items
     }
