@@ -13,7 +13,7 @@
     </span>
 
     {#each categories as cat}
-        <a href="/recipes/{cat.id}" class="text-gray-500 hover:underline">
+        <a href="/recipes/{cat.slug}" class="text-gray-500 hover:underline">
             {cat.category}
         </a>
 

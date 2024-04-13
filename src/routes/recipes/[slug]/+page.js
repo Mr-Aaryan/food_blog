@@ -2,7 +2,9 @@ import { pb } from '$lib/pocketbase';
 
 export async function load({ params }){
     
-    const categoryId = params.slug;
+    const categorySlug = params.slug;
+    const categoryRecord = await pb.collection('categories').getFirstListItem(`slug = '${categorySlug}'`)
+    const categoryId = categoryRecord.id;
     const posts = await pb.collection('posts').getList(1, 50, {
         filter: `Published = True && category = '${categoryId}'`,
         expand: "category"

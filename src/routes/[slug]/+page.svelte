@@ -38,6 +38,7 @@
             videoId = url.match(/[?&]v=([^&]+)/)[1];
         }
     }
+    console.log(data.categories)
 </script>
 
 <svelte:head>

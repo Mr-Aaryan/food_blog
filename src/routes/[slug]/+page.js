@@ -27,7 +27,7 @@ export async function load({params}) {
     function getCategoryAndId(obj) {
         if (obj && typeof obj === 'object') {
             if (obj.category && obj.id) {
-                categoriesArray.unshift({ category: obj.category, id: obj.id });
+                categoriesArray.unshift({ category: obj.category, id: obj.id, slug: obj.slug });
             }
             for (let key in obj) {
                 if (obj.hasOwnProperty(key)) {
