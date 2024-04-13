@@ -9,11 +9,11 @@
 
 
 <div class="layout">
-	  <Navbar />
-	  <main>
-		  <PageTransition url={data.url}>
-			  <slot />
-		  </PageTransition>
-	  </main>
-	  <Footer />
-  </div>
+	<Navbar />
+	<main>
+		<PageTransition url={data.url}>
+			<slot />
+		</PageTransition>
+	</main>
+	<Footer />
+</div>

@@ -18,7 +18,6 @@
                     </div>
                 </a>
             {/each}
-
         </div>
     </div>
 </section>
