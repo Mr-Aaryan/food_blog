@@ -1,7 +1,7 @@
 <script>
     import * as config from "$lib/site/config";
 </script>
-<footer class=" bg-white border-t">
+<footer class=" bg-white border-t relative">
     <div class="max-w-5xl px-6 py-8 mx-auto">
         <div class="flex flex-col items-center text-center">
             <a href="/">

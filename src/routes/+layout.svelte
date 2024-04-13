@@ -7,8 +7,13 @@
 	export let data;
 </script>
 
-<Navbar />
-<PageTransition url={data.url}>
-	<slot />
-</PageTransition>
-<Footer />
+
+<div class="layout">
+	  <Navbar />
+	  <main>
+		  <PageTransition url={data.url}>
+			  <slot />
+		  </PageTransition>
+	  </main>
+	  <Footer />
+  </div>
