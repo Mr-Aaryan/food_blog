@@ -1,4 +1,6 @@
 <script>
+    import Carousel from "svelte-carousel";
+
     import RecentCard from "$lib/components/cards/RecentCard.svelte"
     import CategoryCard from "$lib/components/cards/CategoryCard.svelte"
     import PopularCard from "$lib/components/cards/PopularCard.svelte";
@@ -8,14 +10,14 @@
 
 <main class="max-w-5xl px-5 mx-auto my-10 light">
 
-    <section class="border-b border-gray-400 pb-12">
-        <div class="flex justify-around lg:justify-between flex-row flex-wrap overflow-hidden w-full">
-            {#each data.categories as cat}
-                <div class="basis-3 my-5">
-                    <CategoryCard category_id={cat.id} itemName={cat.category} src="https://i.ndtvimg.com/i/2016-09/tofu-625_625x350_61474273627.jpg"/>
-                </div>
-            {/each}
-        </div>
+    <section class="border-b border-gray-400 pb-12 flex justify-between items-center">
+            <Carousel particlesToShow={3} particlesToScroll={1} >
+                {#each data.categories as cat}
+                    <div>
+                        <CategoryCard category_slug={cat.slug} itemName={cat.category} src="http://127.0.0.1:8090/api/files/{cat.collectionId}/{cat.id}/{cat.featured_image}"/>
+                    </div>
+                {/each}
+            </Carousel>
     </section>
     
     <section class="py-4 pb-8 border-b border-slate-400">
@@ -24,6 +26,7 @@
             {#each data.posts as post}
                 <PopularCard src="http://127.0.0.1:8090/api/files/{post.collectionId}/{post.id}/{post.featured_image}" href="/{post.title.toLowerCase().replace(/\s+/g, "-")}-{post.id}"/>
             {/each} 
+            
         </div>
     </section>
     
@@ -41,5 +44,4 @@
         {/each}
     </section>
 
-    
 </main>
