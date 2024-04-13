@@ -9,17 +9,10 @@
             </a>
 
             <div class="flex flex-wrap justify-center mt-6 -mx-4">
-                <a href="/" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-yellow-500  " aria-label="Reddit"> Home </a>
-                
-                <a href="/about" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-yellow-500  " aria-label="Reddit"> About </a>
-                
-                <a href="/contact" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-yellow-500  " aria-label="Reddit"> Teams </a>
-
-                <a href="/privacy" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-yellow-500  " aria-label="Reddit"> Privacy </a>
-
-                <a href="/Cookies" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-yellow-500  " aria-label="Reddit"> Cookies </a>
+                <a href="/" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-yellow-500  "> Home </a>
+                <a href="/pages/about" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-yellow-500  "> About </a>
+                <a href="/pages/privacy" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-yellow-500  "> Privacy </a>
             </div>
-
         </div>
 
         <hr class="my-6 border-gray-200 md:my-10 " />

@@ -2,8 +2,8 @@
     import * as config from '$lib/site/config.js'
     import Breadcrumb from '$lib/components/Breadcrumb.svelte'
     import Review from '$lib/components/Review.svelte';
-    export let data;
 
+    export let data;
     let videoId = '';
 
     export let count = 1;
@@ -16,8 +16,6 @@
             fillColor[i] = i <= index ? 'gold' : 'gray';
         }
     }
-
-    console.log(data.similar_posts)
 
     const timestamp = data.post.updated;
     const post_date = new Date(timestamp);
@@ -38,7 +36,6 @@
             videoId = url.match(/[?&]v=([^&]+)/)[1];
         }
     }
-    console.log(data.categories)
 </script>
 
 <svelte:head>
@@ -85,7 +82,7 @@
         <h2 class="text-center">You May Also Like</h2>
         <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
             {#each data.similar_posts as post}
-            <a href="/{post.id}" class="">
+            <a href="/{post.title.toLowerCase().replace(/\s+/g, "-")}-{post.id}" class="">
                 <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="http://127.0.0.1:8090/api/files/{post.collectionId}/{post.id}/{post.featured_image}" alt="{post.title}">
                 <div class="py-2 hover:none">
                     <span class="uppercase text-sm font-semibold text-gray-700">{post.expand.category.category}</span>

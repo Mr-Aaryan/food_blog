@@ -19,7 +19,7 @@
 
 <section class="max-w-5xl mx-auto px-5 mt-12">
     <h2 class="text-center py-5">Categories</h2>
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+    <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
         {#each data.categories as cat}
             <CategoryCard category_slug={cat.slug} itemName={cat.category} src="http://127.0.0.1:8090/api/files/{cat.collectionId}/{cat.id}/{cat.featured_image}"/>
         {/each}

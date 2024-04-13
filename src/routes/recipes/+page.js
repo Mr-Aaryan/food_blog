@@ -7,8 +7,6 @@ export async function load(){
         expand: "category"
     });
 
-    console.log(posts);
-
     return {
         posts : posts.items,
     }

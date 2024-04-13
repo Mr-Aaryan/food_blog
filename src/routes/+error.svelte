@@ -1,0 +1,1 @@
+<p class="text-center py-10">404 Page Not Found</p>

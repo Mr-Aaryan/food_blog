@@ -1,7 +1,6 @@
 <script>
     import Arrow from '$lib/icons/arrow.svelte';
     export let data;
-    console.log(data.sub_posts)
 </script>
 
 <section class="bg-white">
@@ -28,7 +27,7 @@
 
         {#each data.sub_posts as sub_post}
         <div class="mt-10">
-            <a href="/recipes/{sub_post.id}"><h1 class="text-xl font-semibold text-gray-800 capitalize lg:text-2xl hover:text-yellow-500">{sub_post.category} <Arrow/></h1></a>
+            <a href="/recipes/{sub_post.slug}"><h2 class="text-xl font-semibold text-gray-800 capitalize lg:text-2xl hover:text-yellow-500">{sub_post.category} <Arrow/></h2></a>
             <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
                 {#each sub_post.new_posts.items as post}
                     <a href="/{post.title.toLowerCase().replace(/\s+/g, "-")}-{post.id}" class="">

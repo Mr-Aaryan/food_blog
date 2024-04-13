@@ -19,8 +19,6 @@ export async function load({params}) {
         filter: `postId = "${post_id}" && Published = True`,
         expand: "userId"
     });
-    
-    console.log("reviews:",reviews)
 
     let categoriesArray = [];
 

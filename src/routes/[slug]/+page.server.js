@@ -9,16 +9,12 @@ export const actions = {
 		const content = data.get('review');
         const postId = data.get('post_id');
 
-        console.log(full_name, email)
-
         const userValues = {
             "full_name" : full_name,
             "email": email
         };
 
 		const user = await pb.collection('users').create(userValues);
-
-        console.log(user);
 
         const reviewValues = {
             "review_text": content,
@@ -28,9 +24,7 @@ export const actions = {
         }
 
         const review = await pb.collection('reviews').create(reviewValues);
-
-        console.log(review)
-
+        
 		return { success: true };
 	}
 };
