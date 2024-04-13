@@ -45,11 +45,11 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="{data.post.title}" />
 	<meta content={config.siteUrl} property="og:url" />
-	<meta property="og:description" content="chicken tikki" />
+	<meta property="og:description" content="{data.post.description}" />
 	<meta content={config.siteName} property="og:site_name" />
 
-	<meta content="chicken tikki" name="twitter:title" />
-	<meta content="chicken tikki" name="twitter:description" />
+	<meta content="{data.post.title}" name="twitter:title" />
+	<meta content="{data.post.description}" name="twitter:description" />
 </svelte:head>
 
 <main>
@@ -85,7 +85,7 @@
         <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
             {#each data.similar_posts as post}
             <a href="/{post.id}" class="">
-                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=600" alt="m">
+                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="http://127.0.0.1:8090/api/files/{post.collectionId}/{post.id}/{post.featured_image}" alt="{post.title}">
                 <div class="py-2 hover:none">
                     <span class="uppercase text-sm font-semibold text-gray-700">{post.expand.category.category}</span>
                     <h2 class="text-xl text-yellow-500 hover:underline">{post.title}</h2>
@@ -96,8 +96,8 @@
     </div>
     <!-- reviews and ratings -->
     {#if data.post.reviews_allowed == true}
-    <div class="max-w-3xl mx-auto px-5 py-8 bg-neutral-100">
-        <div class="pb-12 border-b border-black">
+    <div class="max-w-3xl mx-auto bg-neutral-100">
+        <div class="p-5 rounded">
             <div class="w-fit">
                 <h3>Your Rating</h3>
                 <div class="mt-3">
@@ -122,10 +122,17 @@
                 </form>
             </div>
           </div>
-          <h3>Reviews</h3>
-          {#each data.reviews as review}
-            <Review ratingCount={review.rating} review_text={review.review_text} review_date={review.created} user_name={review.expand.userId.full_name}  />
-        {/each}
+          <hr>
+          <div class="p-5">
+            {#if data.reviews.totalItems > 0}
+                <h3>Reviews</h3>
+                {#each data.reviews.items as review}
+                    <Review ratingCount={review.rating} review_text={review.review_text} review_date={review.created} user_name={review.expand.userId.full_name}  />
+                {/each}
+            {:else}
+            <p class="text-center p-5 text-sm">Be the first one to review.</p>
+            {/if}
+           </div>
     </div>
     {/if}
     

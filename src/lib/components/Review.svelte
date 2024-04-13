@@ -13,7 +13,7 @@
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(timestamp);
 
 </script>
-<div class="mt-5 py-3 px-3 border-b">
+<div class="mt-5 pt-5 border-t">
     <div class="flex items-center w-fit">
         <img src="https://pinnacle.works/wp-content/uploads/2022/06/dummy-image.jpg" alt="dummy_img" class="h-10 rounded-full">
         <span class="px-3">{user_name}</span>

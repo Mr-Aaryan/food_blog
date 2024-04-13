@@ -20,8 +20,7 @@ export async function load({params}) {
         expand: "userId"
     });
     
-    console.log(similar_posts)
-
+    console.log("reviews:",reviews)
 
     let categoriesArray = [];
 
@@ -43,7 +42,7 @@ export async function load({params}) {
 
     return {
         post,
-        reviews: reviews.items,
+        reviews: reviews,
         categories : categoriesArray,
         similar_posts: similar_posts.items
     }

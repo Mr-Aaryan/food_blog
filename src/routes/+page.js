@@ -1,7 +1,9 @@
 import {pb} from '$lib/pocketbase';
 
 export async function load() {
-    const categories = await pb.collection('categories').getList();
+    const categories = await pb.collection('categories').getList(1, 50, {
+        filter: `parent_category = '' `
+    });
     const posts = await pb.collection('posts').getList(1, 50, {
         filter: 'Published = True',
         sort: '-created',
