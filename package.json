@@ -27,7 +27,6 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/manrope": "^5.0.19",
-		"pocketbase": "^0.21.1",
-		"svelte-carousel": "github:vadimkorr/svelte-carousel#pull/142/head"
+		"pocketbase": "^0.21.1"
 	}
 }

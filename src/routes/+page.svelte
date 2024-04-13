@@ -1,5 +1,5 @@
 <script>
-    import Carousel from "svelte-carousel";
+    // import Carousel from "svelte-carousel";
 
     import RecentCard from "$lib/components/cards/RecentCard.svelte"
     import CategoryCard from "$lib/components/cards/CategoryCard.svelte"
@@ -11,13 +11,13 @@
 <main class="max-w-5xl px-5 mx-auto my-10 light">
 
     <section class="border-b border-gray-400 pb-12 flex justify-between items-center">
-            <Carousel particlesToShow={3} particlesToScroll={1} >
+            <!-- <Carousel particlesToShow={3} particlesToScroll={1} >
                 {#each data.categories as cat}
                     <div>
                         <CategoryCard category_slug={cat.slug} itemName={cat.category} src="http://127.0.0.1:8090/api/files/{cat.collectionId}/{cat.id}/{cat.featured_image}"/>
                     </div>
                 {/each}
-            </Carousel>
+            </Carousel> -->
     </section>
     
     <section class="py-4 pb-8 border-b border-slate-400">

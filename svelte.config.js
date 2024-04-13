@@ -4,12 +4,12 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   kit: {
     adapter: adapter(),
-    vite: {
-      optimizeDeps: {
-        include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
-      }
-      // plugins: []
-    },
+    // vite: {
+    //   optimizeDeps: {
+    //     include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+    //   }
+    //   // plugins: []
+    // },
   },
   preprocess: vitePreprocess()
 };
