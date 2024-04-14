@@ -1,7 +1,12 @@
 <script>
-    import CategoryCard from "$lib/components/cards/CategoryCard.svelte"
+    import * as config from '$lib/site/config'
+    import CategoryCard from '$lib/components/cards/CategoryCard.svelte'
     export let data;
 </script>
+
+<svelte:head>
+    <title>{config.siteTitle}</title>
+</svelte:head>
 
 <section class="max-w-5xl mx-auto px-5 mt-8">
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">

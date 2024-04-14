@@ -16,7 +16,7 @@ export async function load({params}) {
     });
 
     const reviews = await pb.collection('reviews').getList(1, 50, {
-        filter: `postId = "${post_id}" && Published = True`,
+        filter: `postId = '${post_id}' && Published = True`,
         expand: "userId"
     });
 

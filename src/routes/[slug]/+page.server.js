@@ -20,7 +20,8 @@ export const actions = {
             "review_text": content,
             "rating": rating,
             "postId": postId,
-            "userId": user.id
+            "userId": user.id,
+            "Published": true
         }
 
         const review = await pb.collection('reviews').create(reviewValues);

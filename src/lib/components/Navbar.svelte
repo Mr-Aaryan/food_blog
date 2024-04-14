@@ -1,4 +1,6 @@
 <script>
+    import * as config from "$lib/site/config"
+
     let isOpen = false;
   
     function toggleMenu() {
@@ -16,7 +18,7 @@
         <div class="max-w-5xl px-6 py-6 mx-auto lg:flex lg:justify-between lg:items-center">
             <div class="flex items-center justify-between">
                 <a href="/" class="text-2xl font-semibold text-yellow-500">
-                    Food Blog
+                    {config.siteTitle}
                 </a>
   
                   <!-- Mobile menu button -->
