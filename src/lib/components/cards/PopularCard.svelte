@@ -1,5 +1,5 @@
 <script>
-    import { Rating, AdvancedRating, ScoreRating } from 'flowbite-svelte';
+    import { Rating } from 'flowbite-svelte';
     let ratingCount = 4.5;
 
     export let src, href;
