@@ -1,0 +1,1 @@
+const s="https://pramilasrecipes.pockethost.io",t="pramilasrecipes",a="https://pramilasrecipes.com/",o="Pramilas Recipes",e="https://facebook.com",c="https://youtube.com",i="https://instagram.com",p=s;export{s as P,a,t as b,e as f,i,p,o as s,c as y};
