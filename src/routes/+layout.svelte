@@ -11,9 +11,9 @@
 <div class="layout">
 	<Navbar />
 	<main>
-		<PageTransition url={data.url}>
+		<!-- <PageTransition url={data.url}> -->
 			<slot />
-		</PageTransition>
+		<!-- </PageTransition> -->
 	</main>
 	<Footer />
 </div>
