@@ -1,5 +1,6 @@
 <script>
     import Arrow from '$lib/icons/arrow.svelte';
+    import * as config from '$lib/site/config'
     export let data;
     console.log(data.posts)
 </script>
@@ -22,7 +23,7 @@
     <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
         {#each data.posts as post}
             <a href="/{post.title.toLowerCase().replace(/\s+/g, "-")}-{post.id}" class="">
-                <img class="bg-neutral-200 object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://pramilasrecipes.pockethost.io/api/files/{post.collectionId}/{post.id}/{post.featured_image}" alt="{post.title}">
+                <img class="bg-neutral-200 object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="{config.pocketbase}/api/files/{post.collectionId}/{post.id}/{post.featured_image}" alt="{post.title}">
                 <div class="py-2 hover:none">
                     <div class="">
                         <h2 class="text-xl text-yellow-500 hover:underline">{post.title}</h2>
@@ -39,7 +40,7 @@
         <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
             {#each sub_post.new_posts.items as post}
                 <a href="/{post.title.toLowerCase().replace(/\s+/g, "-")}-{post.id}" class="">
-                    <img class="bg-neutral-200 object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="http://127.0.0.1:8090/api/files/{post.collectionId}/{post.id}/{post.featured_image}" alt="{post.title}">
+                    <img class="bg-neutral-200 object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="{config.pocketbase}/api/files/{post.collectionId}/{post.id}/{post.featured_image}" alt="{post.title}">
                     <div class="py-2 hover:none">
                         <div class="">
                             <h2 class="text-xl text-yellow-500 hover:underline">{post.title}</h2>
