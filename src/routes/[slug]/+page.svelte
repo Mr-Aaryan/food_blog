@@ -1,6 +1,6 @@
 <script>
+    import { pb } from "$lib/pocketbase"
     import * as config from '$lib/site/config.js'
-    import Breadcrumb from '$lib/components/Breadcrumb.svelte'
     import Review from '$lib/components/Review.svelte';
 
     export let data;
@@ -8,7 +8,7 @@
 
     export let count = 1;
     let stars = [1,2,3,4,5];
-    let fillColor = ['gray', 'gray', 'gray', 'gray', 'gray'];
+    let fillColor = ['gold', 'gray', 'gray', 'gray', 'gray'];
   
     function toggleFill(index) {
         count = index + 1;
@@ -16,7 +16,6 @@
             fillColor[i] = i <= index ? 'gold' : 'gray';
         }
     }
-    console.log(data.reviews)
     const timestamp = data.post.updated;
     const post_date = new Date(timestamp);
 
@@ -27,6 +26,16 @@
     };
 
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(post_date);
+
+    let showReviews = false;
+    let reviews = [];
+    async function getReviews() { 
+        showReviews = !showReviews;
+        reviews = await pb.collection('reviews').getList(1, 50, {
+        filter: `postId = '${data.post.id}' && Published = True`,
+        expand: "userId"
+        });
+    }
     
     if (data.post.youtube_url != '') {
         let url = data.post.youtube_url
@@ -52,8 +61,7 @@
 
 <div class="max-w-3xl w-full mx-auto py-10 border-b">
     <article class="px-5">
-        <div class="">
-            <Breadcrumb categories = {data.categories} title = {data.post.title} />
+        <div>
             <h1 class="text-4xl font-medium capitalize">{data.post.title}</h1>
             <div class="py-4">
                 <p class="text-sm">Updated on {formattedDate}</p>
@@ -77,20 +85,6 @@
     {/if}
 </div>
 
-<div class="max-w-5xl mx-auto px-5 py-8">
-    <h2 class="text-center">You May Also Like</h2>
-    <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
-        {#each data.similar_posts as post}
-        <a href="/{post.title.toLowerCase().replace(/\s+/g, "-")}-{post.id}" class="">
-            <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80 ease-in duration-100 hover:scale-105" src="https://pramilasrecipes.pockethost.io/api/files/{post.collectionId}/{post.id}/{post.featured_image}" alt="{post.title}">
-            <div class="py-2 hover:none">
-                <span class="uppercase text-sm font-semibold text-gray-700">{post.expand.category.category}</span>
-                <h2 class="text-xl text-yellow-500 hover:underline">{post.title}</h2>
-            </div>
-        </a>
-        {/each}
-    </div>
-</div>
 <!-- reviews and ratings -->
 {#if data.post.reviews_allowed == true}
 <div class="max-w-3xl mx-auto bg-neutral-100">
@@ -120,14 +114,18 @@
         </div>
       </div>
       <hr>
-      <div class="p-5">
-        {#if data.reviews.totalItems > 0}
-            <h3>Reviews</h3>
-            {#each data.reviews.items as review}
-                <Review ratingCount={review.rating} review_text={review.review_text} review_date={review.created} user_name={review.expand.userId.full_name}  />
-            {/each}
+      <div class="p-5 w-full">
+        {#if showReviews == true}
+            {#if reviews.totalItems > 0}
+                <h3>Reviews</h3>
+                {#each reviews.items as review}
+                    <Review ratingCount={review.rating} review_text={review.review_text} review_date={review.created} user_name={review.expand.userId.full_name}  />
+                {/each}
+            {:else}
+            <p class="text-center p-5 text-sm">Be the first one to review.</p>
+            {/if}
         {:else}
-        <p class="text-center p-5 text-sm">Be the first one to review.</p>
+            <button class="block w-56 px-3 py-2 border bg-neutral-300 hover:bg-neutral-200 rounded-lg mx-auto" on:click={getReviews}>Show Reviews</button>
         {/if}
        </div>
 </div>

@@ -1,4 +1,12 @@
-import { pb } from '$lib/pocketbase';
+import { pb } from "$lib/pocketbase"
+
+export async function load({params}) {
+    const post_url = params.slug;
+    const lastIndex = post_url.lastIndexOf("-");
+    const post_id = post_url.substring(lastIndex + 1);
+    const post = await pb.collection('posts').getOne(post_id);
+    return { post }
+}
 
 export const actions = {
 	submitReview: async ({ request }) => {
