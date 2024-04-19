@@ -1,4 +1,13 @@
 <script>
+    import { page } from '$app/stores';
+
+    import Facebook from '$lib/icons/Facebook.svelte';
+    import Twitter from '$lib/icons/Twitter.svelte';
+    import Whatsapp from '$lib/icons/Whatsapp.svelte';
+   
+
+    import { Rating } from 'flowbite-svelte';
+    let ratingCount = 4.5;
     import { pb } from "$lib/pocketbase"
     import * as config from '$lib/site/config.js'
     import Review from '$lib/components/Review.svelte';
@@ -29,12 +38,14 @@
 
     let showReviews = false;
     let reviews = [];
+    let review_list = [];
     async function getReviews() { 
         showReviews = !showReviews;
         reviews = await pb.collection('reviews').getList(1, 50, {
         filter: `postId = '${data.post.id}' && Published = True`,
         expand: "userId"
         });
+        review_list = [...review_list, reviews];
     }
     
     if (data.post.youtube_url != '') {
@@ -65,6 +76,29 @@
             <h1 class="text-4xl font-medium capitalize">{data.post.title}</h1>
             <div class="py-4">
                 <p class="text-sm">Updated on {formattedDate}</p>
+                <div class="flex items-center">
+                    <Rating id="example-3" total={5} size={30} rating={ratingCount} />
+                    <span class="ms-2 text-sm font-medium text-gray-500">{ratingCount} from <a href="#review">reviews</a></span>
+                </div>
+                <div class="flex py-3">
+                    <i> <a 
+                        title="Share on Whatsapp"
+                        href="https://api.whatsapp.com/send?text={$page.url}"
+                        class="px-2"> <Whatsapp /> </a>
+                    </i>
+                    <i> <a 
+                        title="Share on Facebook"
+                        href="https://www.facebook.com/sharer/sharer.php?u={$page.url}"
+                        class="px-2"> <Facebook /> </a>
+                    </i>
+                    <i> <a 
+                        title="Share on Twitter"
+                        href="https://twitter.com/share?url={$page.url}"
+                        class="px-2"> <Twitter /> </a>
+                    </i>
+                    
+
+                </div>
             </div>
         </div>
         <hr>
@@ -114,19 +148,19 @@
         </div>
       </div>
       <hr>
-      <div class="p-5 w-full">
-        {#if showReviews == true}
-            {#if reviews.totalItems > 0}
-                <h3>Reviews</h3>
-                {#each reviews.items as review}
-                    <Review ratingCount={review.rating} review_text={review.review_text} review_date={review.created} user_name={review.expand.userId.full_name}  />
-                {/each}
+        <div class="p-5 w-full" id="review">
+            {#if showReviews == true}
+                {#if reviews.totalItems > 0}
+                    <h3>Reviews</h3>
+                    {#each reviews.items as review}
+                        <Review ratingCount={review.rating} review_text={review.review_text} review_date={review.created} user_name={review.expand.userId.full_name}  />
+                    {/each}
+                {:else}
+                <p class="text-center p-5 text-sm">Be the first one to review.</p>
+                {/if}
             {:else}
-            <p class="text-center p-5 text-sm">Be the first one to review.</p>
+                <button class="block w-56 px-3 py-2 border bg-neutral-300 hover:bg-neutral-200 rounded-lg mx-auto" on:click={getReviews}>Show Reviews</button>
             {/if}
-        {:else}
-            <button class="block w-56 px-3 py-2 border bg-neutral-300 hover:bg-neutral-200 rounded-lg mx-auto" on:click={getReviews}>Show Reviews</button>
-        {/if}
        </div>
 </div>
 {/if}
