@@ -80,24 +80,22 @@
                     <Rating id="example-3" total={5} size={30} rating={ratingCount} />
                     <span class="ms-2 text-sm font-medium text-gray-500">{ratingCount} from <a href="#review">reviews</a></span>
                 </div>
-                <div class="flex py-3">
+                <div class="flex py-3 items-center">
                     <i> <a 
                         title="Share on Whatsapp"
                         href="https://api.whatsapp.com/send?text={$page.url}"
-                        class="px-2"> <Whatsapp /> </a>
+                        class="px-2 grayscale hover:grayscale-0"> <Whatsapp /> </a>
                     </i>
                     <i> <a 
                         title="Share on Facebook"
                         href="https://www.facebook.com/sharer/sharer.php?u={$page.url}"
-                        class="px-2"> <Facebook /> </a>
+                        class="px-2 grayscale hover:grayscale-0"> <Facebook /> </a>
                     </i>
                     <i> <a 
                         title="Share on Twitter"
                         href="https://twitter.com/share?url={$page.url}"
-                        class="px-2"> <Twitter /> </a>
+                        class="px-2 grayscale hover:grayscale-0"> <Twitter /> </a>
                     </i>
-                    
-
                 </div>
             </div>
         </div>
